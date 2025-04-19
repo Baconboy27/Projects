@@ -3,15 +3,188 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Baconboy27 | Project Showcase</title>
+  <title>Baconboy27 | Evencity Project</title>
   <link rel="icon" type="image/x-icon" href="favicon.ico"/>
   <link rel="preconnect" href="https://fonts.googleapis.com"/>
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet"/>
 
   <style>
-    /* [Same CSS as before, no changes needed] */
-    /* You can paste the entire CSS block from your original file here */
+    :root {
+      --bg-color: #121212;
+      --sidebar-bg: #1f1f2e;
+      --text-color: #e0e0e0;
+      --subtext-color: #a0a0a0;
+      --accent: #4f8cff;
+      --card-bg: #1e1e2f;
+      --hover-card: #292943;
+    }
+
+    body {
+      margin: 0;
+      font-family: 'Inter', sans-serif;
+      background-color: var(--bg-color);
+      color: var(--text-color);
+    }
+
+    .container {
+      display: flex;
+      min-height: 100vh;
+    }
+
+    .sidebar {
+      width: 280px;
+      background-color: var(--sidebar-bg);
+      color: var(--text-color);
+      padding: 2rem;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+
+    .profile {
+      text-align: center;
+    }
+
+    .avatar img {
+      width: 120px;
+      height: 120px;
+      border-radius: 50%;
+      margin-bottom: 1rem;
+    }
+
+    .name {
+      font-size: 1.5rem;
+      font-weight: 700;
+      margin-bottom: 0.5rem;
+    }
+
+    .title {
+      font-size: 1rem;
+      font-weight: 400;
+      color: var(--subtext-color);
+    }
+
+    .contact-info {
+      margin-top: 2rem;
+      width: 100%;
+    }
+
+    .contact-item {
+      margin-bottom: 1rem;
+    }
+
+    .contact-label {
+      font-size: 0.85rem;
+      font-weight: 600;
+      color: var(--subtext-color);
+      margin: 0;
+    }
+
+    .contact-value {
+      font-size: 1rem;
+      font-weight: 500;
+      margin: 0;
+    }
+
+    .main-content {
+      flex: 1;
+      padding: 2rem 4rem;
+    }
+
+    .nav {
+      margin-bottom: 2rem;
+    }
+
+    .nav-list {
+      list-style: none;
+      padding: 0;
+      display: flex;
+      gap: 1.5rem;
+    }
+
+    .nav-item {
+      font-size: 1rem;
+    }
+
+    .nav-link {
+      text-decoration: none;
+      color: var(--text-color);
+      font-weight: 500;
+    }
+
+    .nav-link.active {
+      color: var(--accent);
+    }
+
+    .section {
+      margin-bottom: 3rem;
+    }
+
+    .section-title {
+      font-size: 1.5rem;
+      font-weight: 700;
+      margin-bottom: 1rem;
+    }
+
+    .section-content {
+      max-width: 800px;
+    }
+
+    .paragraph {
+      font-size: 1rem;
+      line-height: 1.6;
+      margin-bottom: 1rem;
+      color: var(--subtext-color);
+    }
+
+    .cards-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 1.5rem;
+    }
+
+    .card {
+      background-color: var(--card-bg);
+      border-radius: 12px;
+      padding: 1.5rem;
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.4);
+      transition: transform 0.2s, background-color 0.3s;
+    }
+
+    .card:hover {
+      transform: translateY(-4px);
+      background-color: var(--hover-card);
+    }
+
+    .card-content {
+      display: flex;
+      align-items: flex-start;
+      gap: 1rem;
+    }
+
+    .card-icon {
+      flex-shrink: 0;
+    }
+
+    .icon {
+      width: 32px;
+      height: 32px;
+      stroke: var(--accent);
+    }
+
+    .card-title {
+      font-size: 1.1rem;
+      font-weight: 600;
+      margin: 0;
+      color: var(--text-color);
+    }
+
+    .card-description {
+      font-size: 0.95rem;
+      color: var(--subtext-color);
+      margin: 0.25rem 0 0;
+    }
   </style>
 </head>
 <body>
@@ -54,14 +227,15 @@
         <h2 class="section-title">Evencity Project</h2>
         <div class="section-content">
           <p class="paragraph">
-            Evencity is a dynamic Minecraft server project where I take on the role of Marketing Manager and Builder. This project merges creativity, community, and strategy in an immersive world-building experience.
+            Evencity is a custom Minecraft server project where I serve as both the Marketing Manager and Builder. It’s a creative and collaborative venture built to engage players with unique experiences and designs.
           </p>
           <p class="paragraph">
-            My responsibilities include crafting and executing marketing campaigns, managing social media presence, building in-game structures, and collaborating with a team to design unique events and game mechanics. It's one of the most exciting and rewarding projects I’ve been a part of.
+            I lead marketing efforts to grow the community and plan server features, while also helping design custom builds and engaging environments in-game.
           </p>
         </div>
 
         <div class="cards-grid">
+          <!-- Card 1 -->
           <div class="card">
             <div class="card-content">
               <div class="card-icon">
@@ -75,27 +249,12 @@
               </div>
               <div>
                 <h3 class="card-title">My Role</h3>
-                <p class="card-description">Marketing Manager & Builder for Evencity, leading campaigns and in-game creativity.</p>
+                <p class="card-description">Marketing Manager & Builder — managing campaigns and building immersive game content.</p>
               </div>
             </div>
           </div>
 
-          <div class="card">
-            <div class="card-content">
-              <div class="card-icon">
-                <svg class="icon" xmlns="http://www.w3.org/2000/svg" fill="none" stroke="currentColor" stroke-width="2"
-                  stroke-linecap="round" stroke-linejoin="round" viewBox="0 0 24 24">
-                  <polyline points="16 18 22 12 16 6" />
-                  <polyline points="8 6 2 12 8 18" />
-                </svg>
-              </div>
-              <div>
-                <h3 class="card-title">Server Features</h3>
-                <p class="card-description">Custom-built maps, unique events, community involvement, and collaborative creativity.</p>
-              </div>
-            </div>
-          </div>
-
+          <!-- Card 2 -->
           <div class="card">
             <div class="card-content">
               <div class="card-icon">
@@ -107,14 +266,30 @@
                 </svg>
               </div>
               <div>
-                <h3 class="card-title">Results</h3>
-                <p class="card-description">Growth in user engagement, successful promotional campaigns, and a thriving in-game world.</p>
+                <h3 class="card-title">Features</h3>
+                <p class="card-description">Custom builds, events, roleplay zones, and community collaboration features.</p>
+              </div>
+            </div>
+          </div>
+
+          <!-- Card 3 -->
+          <div class="card">
+            <div class="card-content">
+              <div class="card-icon">
+                <svg class="icon" xmlns="http://www.w3.org/2000/svg" fill="none" stroke="currentColor" stroke-width="2"
+                  stroke-linecap="round" stroke-linejoin="round" viewBox="0 0 24 24">
+                  <polyline points="16 18 22 12 16 6" />
+                  <polyline points="8 6 2 12 8 18" />
+                </svg>
+              </div>
+              <div>
+                <h3 class="card-title">Growth</h3>
+                <p class="card-description">Playerbase has steadily increased with positive community feedback and support.</p>
               </div>
             </div>
           </div>
         </div>
       </section>
-
     </div>
   </div>
 </body>
